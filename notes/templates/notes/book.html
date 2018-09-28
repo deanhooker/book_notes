@@ -1,0 +1,15 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+
+    <p>{{ book }}</p>
+
+    <ul>
+        {% for chapter in chapters %}
+            <li>{{ chapter }}</li>
+        {% empty %}
+            <li>No chapters have been added yet.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
