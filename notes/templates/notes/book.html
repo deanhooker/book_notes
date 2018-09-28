@@ -2,11 +2,15 @@
 
 {% block content %}
 
-    <p>{{ book }}</p>
+    <h1>{{ book }}</h1>
 
     <ul>
         {% for chapter in chapters %}
-            <li>{{ chapter }}</li>
+            <li>
+                <h3>
+                    <a href="{% url 'notes:chapter' book.id chapter.id %}">{{ chapter }}</a>
+                </h3>
+            </li>
         {% empty %}
             <li>No chapters have been added yet.</li>
         {% endfor %}

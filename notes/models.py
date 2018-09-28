@@ -28,4 +28,4 @@ class Note(models.Model):
 
     def __str__(self):
         """Return a string representation of the note."""
-        return self.text[:50] + "..."
+        return self.text

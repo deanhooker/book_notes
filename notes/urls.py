@@ -12,6 +12,9 @@ urlpatterns = [
     # Show all books
     path('books/', views.books, name='books'),
 
-    # Show notes for a single book.
+    # Show chapters for a single book.
     path('books/<int:book_id>/', views.book, name='book'),
+
+    # Show notes for a chapter.
+    path('books/<int:book_id>/<int:chapter_id>/', views.chapter, name='chapter'),
 ]
