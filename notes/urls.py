@@ -17,4 +17,7 @@ urlpatterns = [
 
     # Show notes for a chapter.
     path('books/<int:book_id>/<int:chapter_id>/', views.chapter, name='chapter'),
+
+    # Page for adding a new book.
+    path('new_book/', views.new_book, name='new_book'),
 ]
